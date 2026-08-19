@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de dados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="dado.png">
+    <script src="script.js" defer> </script>
+
+</head>
+<body>
+    <div id="contenedorPrincipal">
+        <h1 id = "juego">Juego de dados</h1>
+        <h2 id ="tuDinero">Tienes $50 como cantidad inicial</h2>
+
+        <label for = "ingresaNumero">¿A qué número le apuestas?</label>
+        <input
+            type="text"
+            id="ingresaNumero"
+            placeholder="Número a apostar">
+        <p id="mensajeError"></p>
+
+        <label for = "ingresaCantidad">¿Cuánto deseas apostar?</label>
+        <input
+            type="text"
+            id="ingresaCantidad"
+            placeholder="Dinero">
+        <p id="mensajeError2"></p>
+
+        <h3 id = "lanzar">Pulsa el botón para lanzar el dado</h2>
+        <button id = "botonLanzaDado">
+            Lanzar
+        </button>
+        <p></p>
+        <label for = "resultado">Resultado del lanzamiento</label>
+        <input 
+            type="text"
+            id="resultado"
+            placeholder="¿Qué número saldrá?">
+        <p id="mensajeResultado"></p>
+        
+        <label for = "cantidadFinal">La cantidad de dinero acumulado es:</label>
+        <p id="cantidadFinal"></p>
+        
+        <p id="mensajeFinal"></p>
+        <button id= "botonJugarOtravez">Jugar otra</button>
+
+    </div>
+</body>
+</html>

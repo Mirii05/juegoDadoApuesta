@@ -1,0 +1,138 @@
+body{
+    background-color: #D8FFC5;
+    text-align: center;
+}
+
+#contenedorPrincipal {
+    background: #FFDEDE;
+    font-family: Cambria;
+    width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#juego{ 
+    font-family:'Consolas';
+    font-size: 45px; 
+    color: #91008D; 
+    text-shadow: 0px 0px 20px #4300FF;
+}
+
+#ingresaNumero,
+#ingresaCantidad,
+#resultado{
+    width: 150px;
+    padding: 10px 12px;
+    margin: 8px;
+    border: 2px solid #D8FFC5;
+    border-radius: 8px;
+    background-color: #F5FFF0;
+    color: #25412C;
+    font-size: 14px;
+    text-align: center;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+#resultado {
+    width: 200px;
+}
+#cantidadFinal {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#botonLanzaDado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #65BF69 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #65BF69;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+}
+
+#botonLanzaDado:hover {
+ box-shadow: 0 4px 3px 1px #EBFAEB, 0 6px 8px #C6F1C8, 0 -4px 4px #A1E8A5, 0 -6px 4px #C1F6C4, inset 0 0 3px 3px #99F09D;
+}
+
+#botonLanzaDado:active {
+ box-shadow: 0 4px 3px 1px #EBFAEB, 0 6px 8px #C6F1C8, 0 -4px 4px #A1E8A5, 0 -6px 4px #C1F6C4, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+#botonLanzaDado:focus {
+    box-shadow: 0 4px 3px 1px #EBFAEB, 0 6px 8px #C6F1C8, 0 -4px 4px #A1E8A5, 0 -6px 4px #C1F6C4, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+#botonJugarOtravez{
+  --bg: #e74c3c;
+  --text-color: #fff;
+  position: relative;
+  width: 150px;
+  border: none;
+  background: var(--bg);
+  color: var(--text-color);
+  padding: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s;
+  border-radius: 5px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  box-shadow: #c0392b 0px 7px 2px, #000 0px 8px 5px;
+}
+
+#botonJugarOtravez:hover {
+  opacity: 1;
+}
+
+#botonJugarOtravez:active {
+    top: 4px;
+  box-shadow: #c0392b 0px 3px 2px,#000 0px 3px 5px;
+}
+
+#contenedorPrincipal.ganasteFondo{
+    background: lightgreen;
+}
+
+#contenedorPrincipal.perdisteFondo{
+    background: lightcoral;
+}
+
+.perdiste{
+    color: #DE3E3E;
+    font-size: 28px;
+    font-weight: bold;
+}
+.ganaste{
+    color: #D6FB61;
+    font-size: 28px;
+    font-weight: bold;
+}
+#mensajeFinal{
+    color: #4A102A;
+    font-size: 28px;
+    font-weight: bold;
+}
+.juegoTerminado{
+    opacity: 0.7;
+}
+
+#botonLanzaDado:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
