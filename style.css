@@ -2,10 +2,9 @@ body{
     background-color: #D8FFC5;
     text-align: center;
 }
-
 #contenedorPrincipal {
-    background: #FFDEDE;
-    font-family: Cambria;
+    background: #FFDB5C;
+    font-family: Noto Sans;
     width: 500px;
     margin: 30px auto;
     padding: 30px;
@@ -15,21 +14,35 @@ body{
     flex-direction: column;
     align-items: center;
 }
-
+.oculto{
+    display: none;
+}
+#moduloJuego{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+#moduloResultados{
+    background: #FFD18E;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
 #juego{ 
     font-family:'Consolas';
     font-size: 45px; 
     color: #91008D; 
     text-shadow: 0px 0px 20px #4300FF;
 }
-
 #ingresaNumero,
-#ingresaCantidad,
-#resultado{
+#ingresaCantidad{
     width: 150px;
     padding: 10px 12px;
     margin: 8px;
-    border: 2px solid #D8FFC5;
+    border: 2px solid #00224D;
     border-radius: 8px;
     background-color: #F5FFF0;
     color: #25412C;
@@ -39,14 +52,10 @@ body{
     box-sizing: border-box;
     transition: 0.3s;
 }
-#resultado {
-    width: 200px;
-}
 #cantidadFinal {
     font-size: 24px;
     font-weight: bold;
 }
-
 #botonLanzaDado {
   display: flex;
   align-items: center;
@@ -55,27 +64,27 @@ body{
   cursor: pointer;
   width: 150px;
   height: 50px;
-  background-image: linear-gradient(to top, #65BF69 0%, #fff 80%, #FDFDFD 100%);
+  background-image: linear-gradient(to top, #27C2F5 0%, #fff 80%, #FDFDFD 100%);
   border-radius: 30px;
-  border: 1px solid #65BF69;
+  border: 1px solid #27C2F5;
   transition: all 0.2s ease;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family:'Segoe UI', sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: #606060;
+  color: #00224D;
   text-shadow: 0 1px #fff;
 }
 
 #botonLanzaDado:hover {
- box-shadow: 0 4px 3px 1px #EBFAEB, 0 6px 8px #C6F1C8, 0 -4px 4px #A1E8A5, 0 -6px 4px #C1F6C4, inset 0 0 3px 3px #99F09D;
+ box-shadow: 0 4px 3px 1px #E7F8FE, 0 6px 8px #BBECFC, 0 -4px 4px #8FDFFA, 0 -6px 4px #8FDFFA, inset 0 0 3px 3px #63D3F8;
 }
 
 #botonLanzaDado:active {
- box-shadow: 0 4px 3px 1px #EBFAEB, 0 6px 8px #C6F1C8, 0 -4px 4px #A1E8A5, 0 -6px 4px #C1F6C4, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+ box-shadow: 0 4px 3px 1px #E7F8FE, 0 6px 8px #BBECFC, 0 -4px 4px #8FDFFA, 0 -6px 4px #8FDFFA, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
 }
 
 #botonLanzaDado:focus {
-    box-shadow: 0 4px 3px 1px #EBFAEB, 0 6px 8px #C6F1C8, 0 -4px 4px #A1E8A5, 0 -6px 4px #C1F6C4, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+    box-shadow: 0 4px 3px 1px #E7F8FE, 0 6px 8px #BBECFC, 0 -4px 4px #8FDFFA, 0 -6px 4px #8FDFFA, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
 }
 
 #botonJugarOtravez{
