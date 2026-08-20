@@ -1,6 +1,14 @@
 body{
-    background-color: #D8FFC5;
     text-align: center;
+    width: 100%;
+    height: 100%;
+    --color1: rgb(108, 231, 221);
+    --color2: rgb(250, 255, 178);
+    background-color: var(--color1);
+    background-image: linear-gradient(45deg, var(--color2) 25%, transparent 25%, transparent 75%, var(--color2) 75%, var(--color2)), 
+                        linear-gradient(45deg, var(--color2) 25%, var(--color1) 25%, var(--color1) 75%, var(--color2) 75%, var(--color2));
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
 }
 #contenedorPrincipal {
     background: #FFDB5C;
@@ -14,8 +22,23 @@ body{
     flex-direction: column;
     align-items: center;
 }
+#contenedorDinero {
+    width: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid #FFC300;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .oculto{
     display: none;
+}
+#ingresaDatos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 #moduloJuego{
     display: flex;
@@ -23,17 +46,15 @@ body{
     align-items: center;
     gap: 10px;
 }
-#moduloResultados{
-    background: #FFD18E;
-    font-family: monospace;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+#moduloResultado{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
 }
 #juego{ 
-    font-family:'Consolas';
-    font-size: 45px; 
+    font-family: Honk;
+    font-size: 65px; 
     color: #91008D; 
     text-shadow: 0px 0px 20px #4300FF;
 }
@@ -53,7 +74,7 @@ body{
     transition: 0.3s;
 }
 #cantidadFinal {
-    font-size: 24px;
+    font-size: 60px;
     font-weight: bold;
 }
 #botonLanzaDado {

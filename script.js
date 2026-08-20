@@ -6,17 +6,17 @@ const resultado = document.getElementById("resultado");
 const cantidadFinal = document.getElementById("cantidadFinal");
 const mensajeResultado = document.getElementById("mensajeResultado");
 const mensajeFinal = document.getElementById("mensajeFinal");
-const juego = document.getElementById("juego");
+const lanzar = document.getElementById("lanzar");
 const tuDinero = document.getElementById("tuDinero");
 const resultadoLeyenda = document.getElementById("resultadoLeyenda");
 const cantidadFinalLeyenda = document.getElementById("cantidadFinalLeyenda");
 const botonJugarOtravez = document.getElementById("botonJugarOtravez");
-const colores = ["#B2054C", "#0B1849", "#443199", "#FFC300", "#254F22", "#FF5F00"];
+const colores = ["#B2054C", "#0B1849", "#443199", "#FFC300", "#254F22", "#7C00FE"];
 let cantidadInicial = 50; 
 
 function cambiaColorTitulo(){
     const indiceAleatorio = Math.floor(Math.random() * colores.length);
-    juego.style.color = colores[indiceAleatorio];
+    lanzar.style.color = colores[indiceAleatorio];
 }
 
 function validaNumero(){
@@ -90,7 +90,7 @@ function jugar(numeroIngresado, cantidadIngresada){
         return;
     }
     const resultadoDado = lanzaDadoalAzar();
-    resultado.textContent = `$${resultadoDado}`;
+    resultado.textContent = `${resultadoDado}`;
     resultadoLeyenda.classList.remove("oculto");
     cantidadFinalLeyenda.classList.remove("oculto");
     contenedorPrincipal.classList.remove("ganasteFondo", "perdisteFondo");
