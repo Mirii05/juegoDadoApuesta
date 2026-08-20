@@ -6,6 +6,7 @@
     <title>Juego de dados</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Honk:MORF@15&family=Noto+Sans:wght@500&display=swap');
     </style>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="dado.png">
@@ -21,18 +22,24 @@
         </div>
 
         <div id="moduloJuego">
-            <label for = "ingresaNumero">¿A qué número le apuestas?</label>
-            <input
-                type="text"
-                id="ingresaNumero"
-                placeholder="Número a apostar">
-
-            <label for = "ingresaCantidad">¿Cuánto deseas apostar?</label>
-            <input
-                type="text"
-                id="ingresaCantidad"
-                placeholder="Dinero">
-
+            <div id="ingresaDatos">
+                <div id="numeros">
+                    <label for = "ingresaNumero">¿A qué número le apuestas?</label>
+                    <input
+                        type="text"
+                        id="ingresaNumero"
+                        placeholder="Número a apostar">
+                </div>
+                
+                <div id="dinero">
+                    <label for = "ingresaCantidad">¿Cuánto deseas apostar?</label>
+                    <input
+                        type="text"
+                        id="ingresaCantidad"
+                        placeholder="Dinero">
+                </div>
+            </div>
+            
             <h3 id = "lanzar">Pulsa el botón para lanzar el dado</h3>
             <button id = "botonLanzaDado">
                 Lanzar
@@ -40,17 +47,20 @@
         </div>
         
         <div id="moduloResultado">
-            <p></p>
-            <h4 id = "resultadoLeyenda" class="oculto">Resultado del lanzamiento</h4>
-            <p id="resultado"></p>
-            <p id="mensajeResultado"></p>
+            <div id="contenedorDado">
+                <h4 id = "resultadoLeyenda" class="oculto">Resultado del lanzamiento</h4>
+                <p id="resultado"></p>
+                <p id="mensajeResultado"></p>
+            </div>
             
-            <h5 id = "cantidadFinalLeyenda" class="oculto">La cantidad de dinero acumulado es:</h5>
-            <p id="cantidadFinal"></p>
-            <p id="mensajeFinal"></p>
+            <div id="contenedorDinero">
+                <h5 id = "cantidadFinalLeyenda" class="oculto">La cantidad de dinero acumulado es:</h5>
+                <p id="cantidadFinal"></p>
+                <p id="mensajeFinal"></p>
+            </div>
         </div>
         
-        <button id= "botonJugarOtravez">Jugar otra vez</button>
+        <button id= "botonJugarOtravez">Juego nuevo</button>
 
     </div>
 </body>
