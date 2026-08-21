@@ -11,8 +11,11 @@ const tuDinero = document.getElementById("tuDinero");
 const resultadoLeyenda = document.getElementById("resultadoLeyenda");
 const cantidadFinalLeyenda = document.getElementById("cantidadFinalLeyenda");
 const botonJugarOtravez = document.getElementById("botonJugarOtravez");
+const contenedorDado = document.getElementById("contenedorDado");
+const contenedorDinero = document.getElementById("contenedorDinero");
 const colores = ["#B2054C", "#0B1849", "#443199", "#FFC300", "#254F22", "#7C00FE"];
 let cantidadInicial = 50; 
+
 
 function cambiaColorTitulo(){
     const indiceAleatorio = Math.floor(Math.random() * colores.length);
@@ -83,6 +86,7 @@ function lanzaDadoalAzar(){ //recibe el numero ingresado para hacer la comparaci
     return Math.floor(Math.random() * 6 )+1;
 }
 
+
 function jugar(numeroIngresado, cantidadIngresada){
     tuDinero.textContent = "";
     if(cantidadIngresada > cantidadInicial){
@@ -90,6 +94,8 @@ function jugar(numeroIngresado, cantidadIngresada){
         return;
     }
     const resultadoDado = lanzaDadoalAzar();
+    contenedorDado.classList.remove("oculto");
+    contenedorDinero.classList.remove("oculto");
     resultado.textContent = `${resultadoDado}`;
     resultadoLeyenda.classList.remove("oculto");
     cantidadFinalLeyenda.classList.remove("oculto");
